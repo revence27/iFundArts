@@ -1,0 +1,3 @@
+¡FundArts!
+==========
+Modelled loosely on [Catarse](http://catarse.me/), [!FundArts!](http://ifundarts.1st.ug/) is a crowd-funding platform for the arts.
