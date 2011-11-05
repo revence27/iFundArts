@@ -1,0 +1,21 @@
+1.  Account CRUD (Facebook only)
+
+2.  Project CRUD.
+
+3.  Image Resize
+
+4.  Project Tagging
+
+5.  Tag CRUD
+
+6.  Add Project
+
+7.  Money into the box
+
+8.  Account's supported projects
+
+9.  Projects with counters
+
+10. Account's projects.
+
+11. Link projects and backers.

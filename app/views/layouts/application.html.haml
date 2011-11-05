@@ -1,0 +1,31 @@
+!!!
+%html
+  %head
+    %title
+      &iexcl;FundArts!
+      = yield :title
+    = stylesheet_link_tag 'application'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+  %body
+    #main{:class => 'container'}
+      #header{:class => 'span-24'}
+        #logoface{:class => 'span-8'}
+          %img{:src => asset_path('ifundartslogo.png'), :class => 'logoimage', :alt => 'iFundArts!'}
+        #tagline{:class => 'span-16 last'}
+          Crowd Funding for the Arts
+          #explication
+            Many small contributions, one huge impact.
+            %br/
+            Artists with a project that needs funding will place their projects on this website.
+            %br/
+            Backers will chip in, and help the project to its completion
+            &#133;
+            and get a little something.
+      #trunk{:class => 'span-24'}
+        = yield
+      #footer{:class => 'span-24'}
+        &copy; 2011,
+        = succeed '.' do
+          = link_to 'Bayimba Foundation', 'http://www.bayimba.org/'
+        All Rights Reserved

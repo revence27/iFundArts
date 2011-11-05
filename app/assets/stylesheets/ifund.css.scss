@@ -1,0 +1,76 @@
+// Place all the styles related to the nocon controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$base_font: "ComfortaaRegular", "Sans serif";
+
+body, table
+{
+  font-family: $base_font;
+  font-size: 20pt;
+  text-align: center;
+}
+
+#header
+{
+  #logoface
+  {
+    img
+    {
+      width: 200px;
+    }
+  }
+
+  #tagline
+  {
+    font-weight: bold;
+    text-align: left;
+
+    #explication
+    {
+      font-size: 45%;
+      font-weight: normal;
+      letter-spacing: 0.0625em;
+    }
+  }
+}
+  
+#trunk
+{
+
+}
+
+#footer
+{
+  margin-top: 5em;
+  font-size: 50%;
+}
+
+.projects
+{
+  .project
+  {
+    font-size: 50%;
+
+    .descr
+    {
+
+    }
+
+    .header
+    {
+      font-size: 200%;
+      font-weight: bold;
+    }
+
+    .pic
+    {
+      height: 200px;
+    }
+
+    .counters
+    {
+      font-weight: bold;
+    }
+  }
+}

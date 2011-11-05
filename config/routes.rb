@@ -1,4 +1,5 @@
 IfundartsPh::Application.routes.draw do
+  root :to => 'ifund#index', :as => 'home'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

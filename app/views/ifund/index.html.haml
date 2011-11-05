@@ -1,0 +1,21 @@
+= content_for :title do
+  Crowd-funding Website for Arts
+
+.projects
+  - pos = 1
+  - @projects.each do |project|
+    .project{:class => 'span-8' + ((pos % 3).zero? ? ' last' : '')}
+      .header
+        = project.name
+      .pic
+        %img{:src => asset_path(project.image)}
+      .descr
+        = project.description
+      .counters
+        .time
+          Ends in
+          = succeed '.' do
+            = time_ago_in_words project.ends_at
+      .tools
+        = button_to 'iFund This!', home_path
+      - pos = pos + 1
