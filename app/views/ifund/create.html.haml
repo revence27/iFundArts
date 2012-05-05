@@ -1,0 +1,22 @@
+= content_for :title do
+  Create a Project
+
+%form{:method => 'POST', :action => creator_path, :enctype => 'multipart/form-data'}
+  %fieldset
+    %legend Name Your Project:
+    %input{:type => 'text', :name => 'name'}/
+  %fieldset
+    %legend Describe Your Project:
+    %textarea{:name => 'description'}
+  %fieldset
+    %legend Give Your Project a Picture:
+    %input{:type => 'file', :name => 'pic'}/
+    %small{:style => 'font-size: small'}
+      The files we allow are those that end in <code>.gif</code>, <code>.png</code>, and <code>.pdf</code> <em>only</em>.
+  %fieldset
+    %legend Set a Deadline:
+    %input{:type => 'text', :name => 'deadline'}/
+  %fieldset
+    %legend Set a Target ($):
+    %input{:type => 'text', :name => 'target'}/
+  %input{:type => 'submit'}

@@ -2,7 +2,7 @@
 %html
   %head
     %title
-      &iexcl;FundArts!
+      &iexcl;FundArts! &laquo;&bull;&raquo;
       = yield :title
     = stylesheet_link_tag 'application'
     = javascript_include_tag 'application'
@@ -22,6 +22,13 @@
             Backers will chip in, and help the project to its completion
             &#133;
             and get a little something.
+          %ul
+            %li
+              %a{:href => about_path} About
+            %li
+              %a{:href => explore_path} Explore
+            %li
+              %a{:href => create_path} Create a Project
       #trunk{:class => 'span-24'}
         = yield
       #footer{:class => 'span-24'}
