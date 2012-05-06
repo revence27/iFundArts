@@ -11,7 +11,8 @@
     #main{:class => 'container'}
       #header{:class => 'span-24'}
         #logoface{:class => 'span-8'}
-          %img{:src => asset_path('ifundartslogo.png'), :class => 'logoimage', :alt => 'iFundArts!'}
+          %a{:href => home_url}
+            %img{:src => asset_path('ifundartslogo.png'), :class => 'logoimage', :alt => 'iFundArts!'}
         #tagline{:class => 'span-16 last'}
           Crowd Funding for the Arts
           #explication

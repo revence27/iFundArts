@@ -34,6 +34,8 @@ ActiveRecord::Schema.define(:version => 20120506075534) do
     t.text     "description", :null => false
     t.datetime "ends_at",     :null => false
     t.integer  "account_id",  :null => false
+    t.integer  "category_id", :null => false
+    t.datetime "funded_at"
     t.integer  "needs",       :null => false
     t.datetime "created_at"
     t.datetime "updated_at"

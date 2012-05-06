@@ -4,6 +4,8 @@
 
 $base_font: "ComfortaaRegular", "Sans serif";
 $base_colour: #121212;
+$lighter_base_colour: lighten($base_colour, 80%);
+$background_colour: #fff;
 
 body, table
 {
@@ -11,6 +13,7 @@ body, table
   font-size: 20pt;
   text-align: center;
   color: $base_colour;
+  background: $background_colour;
 }
 
 #header
@@ -20,6 +23,12 @@ body, table
     img
     {
       width: 200px;
+    }
+
+    a
+    {
+      color: inherit;
+      text-decoration: inherit;
     }
   }
 
@@ -48,14 +57,14 @@ body, table
 
         a
         {
-          text-shadow: 0em 0em 0.25em lighten($base_colour, 80%);
+          text-shadow: 0em 0em 0.25em $lighter_base_colour;
           border-radius: 0.25em 0.25em 0.25em 0.25em;
           text-decoration: none;
           &:hover
           {
             text-shadow: 0em 0em 0.25em $base_colour;
-            color: lighten($base_colour, 80%);
-            border-bottom: solid 0.25em lighten($base_colour, 80%);
+            color: $lighter_base_colour;
+            border-bottom: solid 0.25em $lighter_base_colour;
           }
         }
       }
@@ -103,6 +112,14 @@ body, table
 
 .projects
 {
+  .indicator
+  {
+    text-align: left;
+    color: $lighter_base_colour;
+    text-shadow: 0em 0em 0.25em $base_colour;
+    font-size: 75%;
+  }
+
   .project
   {
     font-size: 50%;
@@ -141,7 +158,7 @@ fieldset
     border-radius: 1em 1em 1em 1em;
     padding-left: 1em;
     padding-right: 1em;
-    border: 1px solid lighten($base_colour, 80%);
+    border: 1px solid $lighter_base_colour;
     border-bottom: none;
   }
   padding: 0em;
@@ -171,4 +188,24 @@ input[type=file]
 textarea
 {
   height: 5em;
+}
+
+.projectlist
+{
+  text-align: right;
+  font-size: 66.666%;
+  ul
+  {
+    list-style: none;
+    li
+    {
+      margin-right: 0.5em;
+      padding-right: 0.5em;
+      border-right: $background_colour solid 0.5em;
+      &:hover
+      {
+        border-right-color: $lighter_base_colour;
+      }
+    }
+  }
 }

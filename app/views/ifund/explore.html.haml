@@ -3,9 +3,14 @@
 
 .projectlist{:class => 'span-8'}
   %ul
-  - @categories.each do |category|
-    %li
-      = category.name
+    - @categories.each do |category|
+      %li
+        %a{:href => explore_path(:category => category.id)}
+          = category.name
+        - comb  = category.combien
+        - unless  comb.zero? then
+          = surround '(', ')' do
+            = comb
 - @projects.each do |project|
   .exploreproject{:class => 'span-16 last'}
     .explorepic{:class => 'span-2'}
@@ -15,3 +20,4 @@
         = project.name
       .descr
         = project.description
+= will_paginate @projects

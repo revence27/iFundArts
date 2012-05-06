@@ -2,11 +2,13 @@
   Crowd-funding Website for Arts
 
 .projects
+  .indicator{:class => 'span-24'} Urgent
   - pos = 1
   - @projects.each do |project|
-    .project{:class => 'span-8' + ((pos % 3).zero? ? ' last' : '')}
+    .project{:class => 'span-8' + ((pos == 3) ? ' last' : '')}
       .header
         = project.name
+        = pos
       .pic
         %img{:src => asset_path(project.image)}
       .descr
@@ -18,4 +20,35 @@
             = time_ago_in_words project.ends_at
       .tools
         = button_to 'iFund This!', home_path
-      - pos = pos + 1
+    - pos = pos + 1
+.projects
+  .indicator{:class => 'span-24'} Newest
+  - pos = 1
+  - @newbies.each do |project|
+    .project{:class => 'span-8' + ((pos == 3) ? ' last' : '')}
+      .header
+        = project.name
+      .pic
+        %img{:src => asset_path(project.image)}
+      .descr
+        = project.description
+      .counters
+        .time
+          Registered
+          = time_ago_in_words project.created_at
+          ago
+      .tools
+        = button_to 'iFund This!', home_path
+    - pos = pos + 1
+.projects
+  .indicator{:class => 'span-24'} Recently Funded
+  - pos = 1
+  - @finished.each do |project|
+    .project{:class => 'span-8' + ((pos == 3) ? ' last' : '')}
+      .header
+        = project.name
+      .pic
+        %img{:src => asset_path(project.image)}
+      .descr
+        = project.description
+    - pos = pos + 1

@@ -6,6 +6,8 @@ class CreateProjects < ActiveRecord::Migration
       t.text        :description,   :null => false
       t.datetime    :ends_at,       :null => false
       t.integer     :account_id,    :null => false
+      t.integer     :category_id,   :null => false
+      t.timestamp   :funded_at,     :null => true, :default => nil
       t.integer     :needs,         :null => false
       t.timestamps
     end
