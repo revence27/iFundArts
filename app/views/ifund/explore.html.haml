@@ -1,11 +1,16 @@
 = content_for :title do
   Explore Projects
 
+.projectlist{:class => 'span-8'}
+  %ul
+  - @categories.each do |category|
+    %li
+      = category.name
 - @projects.each do |project|
-  .exploreproject{:class => 'span-24'}
-    .explorepic{:class => 'span-2 prepend-4'}
+  .exploreproject{:class => 'span-16 last'}
+    .explorepic{:class => 'span-2'}
       %img{:width => '100%', :src => asset_path(project.image)}
-    .exploredata{:class => 'span-18 last'}
+    .exploredata{:class => 'span-14 last'}
       .header
         = project.name
       .descr

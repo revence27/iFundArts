@@ -29,10 +29,20 @@
               %a{:href => explore_path} Explore
             %li
               %a{:href => create_path} Create a Project
+            %li
+              %a{:href => login_path} Sign In
       #trunk{:class => 'span-24'}
         = yield
       #footer{:class => 'span-24'}
-        &copy; 2011,
-        = succeed '.' do
-          = link_to 'Bayimba Foundation', 'http://www.bayimba.org/'
-        All Rights Reserved
+        .activity
+          %iframe{:src => "//www.facebook.com/plugins/like.php?href=#{CGI.escape(home_url)}&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=trebuchet+ms&amp;height=21", :scrolling => "no", :frameBorder => "0", :style => "border:none; overflow:hidden; width:450px; height:21px; display:block;", :allowTransparency => "true"}
+          %a{:href => about_path} How it Works
+          &bull;
+          %a{:href => terms_path} Terms and Conditions
+          &bull;
+          %a{:href => terms_path} Terms and Conditions
+        .copyright
+          &copy; 2011,
+          = succeed '.' do
+            = link_to 'Bayimba Foundation', 'http://www.bayimba.org/'
+          All Rights Reserved

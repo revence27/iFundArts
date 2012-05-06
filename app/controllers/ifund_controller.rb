@@ -4,7 +4,8 @@ class IfundController < ApplicationController
   end
 
   def explore
-    @projects = Project.order('ends_at ASC')
+    @projects   = Project.order('ends_at ASC')
+    @categories = ProjectCategory.order('name ASC')
   end
 
   def creator

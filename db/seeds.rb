@@ -33,3 +33,42 @@ pros = Project.create(
         :needs => 40_000
       }
   ])
+
+cats  = ProjectCategory.create([
+  {
+    :name => 'Music'
+  },
+  {
+    :name => 'Film and video'
+  },
+  {
+    :name => 'Photography'
+  },
+  {
+    :name => 'Comics'
+  },
+  {
+    :name => 'Dance'
+  },
+  {
+    :name => 'Theatre'
+  },
+  {
+    :name => 'Crafts'
+  },
+  {
+    :name => 'Fine Arts'
+  },
+  {
+    :name => 'Design'
+  },
+  {
+    :name => 'Publishing'
+  },
+  {
+    :name => 'Fashion'
+  },
+  {
+    :name => 'New Media/Games'
+  },
+])
