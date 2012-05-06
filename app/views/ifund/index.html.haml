@@ -2,7 +2,8 @@
   Crowd-funding Website for Arts
 
 .projects
-  .indicator{:class => 'span-24'} Urgent
+  - if @projects.any? then
+    .indicator{:class => 'span-24'} Urgent
   - pos = 1
   - @projects.each do |project|
     .project{:class => 'span-8' + ((pos == 3) ? ' last' : '')}
@@ -14,6 +15,11 @@
       .descr
         = project.description
       .counters
+        .journey
+          %table{:class => 'journeylights'}
+            %tr{:width => '100%'}
+              %td{:width => %[#{project.fund_pc}%]} &nbsp;
+              %td &nbsp;
         .time
           Ends in
           = succeed '.' do
@@ -22,7 +28,8 @@
         = button_to 'iFund This!', home_path
     - pos = pos + 1
 .projects
-  .indicator{:class => 'span-24'} Newest
+  - if @newbies.any? then
+    .indicator{:class => 'span-24'} Newest
   - pos = 1
   - @newbies.each do |project|
     .project{:class => 'span-8' + ((pos == 3) ? ' last' : '')}
@@ -41,7 +48,8 @@
         = button_to 'iFund This!', home_path
     - pos = pos + 1
 .projects
-  .indicator{:class => 'span-24'} Recently Funded
+  - if @finished.any? then
+    .indicator{:class => 'span-24'} Recently Funded
   - pos = 1
   - @finished.each do |project|
     .project{:class => 'span-8' + ((pos == 3) ? ' last' : '')}
