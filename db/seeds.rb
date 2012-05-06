@@ -55,8 +55,8 @@ pros = Project.create(
         :ends_at => Time.now + (10 + rand(30)).days,
         :account_id => 0,
         :category_id  => cats[rand(cats.length)].id,
-        :has_got => 40_000 * rand,
-        :needs => 40_000 * rand(9)
+        :has_got => 40_000.0 * rand,
+        :needs => 40_000.0
       },
       {
         :name => 'Parachutes Album',
@@ -65,8 +65,8 @@ pros = Project.create(
         :ends_at => Time.now + (10 + rand(30)).days,
         :account_id => 0,
         :category_id  => cats[rand(cats.length)].id,
-        :has_got => 40_000 * rand,
-        :needs => 40_000 * rand(9)
+        :has_got => 40_000.0 * rand,
+        :needs => 40_000.0
       },
       {
         :name => 'Misubaawa Album',
@@ -75,7 +75,7 @@ pros = Project.create(
         :ends_at => Time.now + (10 + rand(30)).days,
         :account_id => 0,
         :category_id  => cats[rand(cats.length)].id,
-        :has_got => 40_000 * rand,
-        :needs => 40_000 * rand(9)
+        :has_got => 40_000.0 * rand,
+        :needs => 40_000.0
       }
   ])

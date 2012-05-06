@@ -20,4 +20,9 @@
         = project.name
       .descr
         = project.description
+      .counters
+        %table{:height => '1em', :style => 'padding: 0px; margin: 0px; background: #dedede; border-radius: 20em 20em 20em 20em; font-size: 2%;'}
+          %tr{:height => '1em', :style => 'padding: 0px; margin: 0px;'}
+            %td{:height => '1em', :width => %[#{project.fund_pc}%], :style => 'padding: 0px; margin: 0px; border-radius: 20em 20em 20em 20em; background: #121212;'} &nbsp;
+            %td &nbsp;
 = will_paginate @projects

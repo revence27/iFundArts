@@ -28,4 +28,18 @@ ActiveRecord::Schema.define(:version => 20120506075534) do
     t.datetime "updated_at"
   end
 
+  create_table "projects", :force => true do |t|
+    t.text     "name",                         :null => false
+    t.text     "image",                        :null => false
+    t.text     "description",                  :null => false
+    t.datetime "ends_at",                      :null => false
+    t.integer  "account_id",                   :null => false
+    t.integer  "category_id",                  :null => false
+    t.datetime "funded_at"
+    t.float    "needs",                        :null => false
+    t.float    "has_got",     :default => 0.0, :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
 end
