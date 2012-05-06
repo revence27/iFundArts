@@ -1,3 +1,24 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
+$ ->
+  enableNeatSignIn()
+  playTheSearchGame()
+
+enableNeatSignIn = () ->
+  $('#signin').click((evt) ->
+    evt.preventDefault()
+    alert 'TODO: Put a popup here that enables sign-in.'
+  )
+
+playTheSearchGame = () ->
+  seeker  = $('#gcse')
+  seeker.hide()
+  newli = $('<li></li>')
+  link  = $('<a href="javascript:;">Search</a>')
+  link.click((evt) ->
+    me  = $(evt.target).parent()
+    me.slideDown('fast', () ->
+      seeker.show('fast')
+      # seeker.slideUp('fast')
+    )
+  )
+  newli.append link
+  newli.insertBefore seeker

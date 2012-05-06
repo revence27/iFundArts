@@ -30,7 +30,18 @@
             %li
               %a{:href => create_path} Create a Project
             %li
-              %a{:href => login_path} Sign In
+              %a{:href => login_path, :id => 'signin'} Sign In
+            %li{:id => 'gcse'}
+              %div{:id  =>  "cse", :style =>  "width: 100%;"} Loading ¡FundArts! Arts Search &#133;
+              %script{:src =>  "http://www.google.com/jsapi", :type  =>  "text/javascript"}
+              %script{:type  =>  "text/javascript"}
+                google.load('search', '1', {style : google.loader.themes.MINIMALIST});
+                google.setOnLoadCallback(function() {
+                var customSearchOptions = {};  var customSearchControl = new google.search.CustomSearchControl(
+                '009300983254775965770:fp_rj7vdc_g', customSearchOptions);
+                customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+                customSearchControl.draw('cse');
+                }, true);
       #trunk{:class => 'span-24'}
         = yield
       #footer{:class => 'span-24'}
@@ -40,7 +51,7 @@
           &bull;
           %a{:href => terms_path} Terms and Conditions
           &bull;
-          %a{:href => terms_path} Terms and Conditions
+          %a{:href => 'http://twitter.com/bayimba'} Twitter
         .copyright
           &copy; 2011,
           = succeed '.' do
