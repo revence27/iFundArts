@@ -23,6 +23,6 @@
       .counters
         %table{:height => '1em', :style => 'padding: 0px; margin: 0px; background: #dedede; border-radius: 20em 20em 20em 20em; font-size: 2%;'}
           %tr{:height => '1em', :style => 'padding: 0px; margin: 0px;'}
-            %td{:height => '1em', :width => %[#{project.fund_pc}%], :style => 'padding: 0px; margin: 0px; border-radius: 20em 20em 20em 20em; background: #121212;'} &nbsp;
+            %td{:height => '1em', :width => %[#{project.fund_pc}%], :style => %[padding: 0px; margin: 0px; border-radius: 20em 20em 20em 20em; background: #121212;  background-image: linear-gradient(bottom, rgb(0,0,0) 44%, rgb(201,201,201) 72%, rgb(61,61,61) 86%); background-image: -o-linear-gradient(bottom, rgb(0,0,0) 44%, rgb(201,201,201) 72%, rgb(61,61,61) 86%); background-image: -moz-linear-gradient(bottom, rgb(0,0,0) 44%, rgb(201,201,201) 72%, rgb(61,61,61) 86%); background-image: -webkit-linear-gradient(bottom, rgb(0,0,0) 44%, rgb(201,201,201) 72%, rgb(61,61,61) 86%); background-image: -ms-linear-gradient(bottom, rgb(0,0,0) 44%, rgb(201,201,201) 72%, rgb(61,61,61) 86%); background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, rgb(0,0,0)), color-stop(0.72, rgb(201,201,201)), color-stop(0.86, rgb(61,61,61)));]} &nbsp;
             %td &nbsp;
 = will_paginate @projects
