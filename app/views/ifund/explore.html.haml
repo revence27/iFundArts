@@ -17,7 +17,8 @@
       %img{:width => '100%', :src => asset_path(project.image)}
     .exploredata{:class => 'span-14 last'}
       .header
-        = project.name
+        %a{:href => project_path(project.id)}
+          = project.name
       .descr
         = project.description
       .counters

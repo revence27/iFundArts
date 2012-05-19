@@ -17,4 +17,8 @@ class IfundController < ApplicationController
   def creator
     redirect_to explore_path
   end
+
+  def project
+    @project = Project.find_by_id request[:id]
+  end
 end

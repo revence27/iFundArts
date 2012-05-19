@@ -8,7 +8,8 @@
   - @projects.each do |project|
     .project{:class => 'span-8' + ((pos == 3) ? ' last' : '')}
       .header
-        = project.name
+        %a{:href => project_path(project.id)}
+          = project.name
       .pic
         %img{:src => asset_path(project.image)}
       .descr
@@ -32,7 +33,8 @@
   - @newbies.each do |project|
     .project{:class => 'span-8' + ((pos == 3) ? ' last' : '')}
       .header
-        = project.name
+        %a{:href => project_path(project.id)}
+          = project.name
       .pic
         %img{:src => asset_path(project.image)}
       .descr
@@ -56,7 +58,8 @@
   - @finished.each do |project|
     .project{:class => 'span-8' + ((pos == 3) ? ' last' : '')}
       .header
-        = project.name
+        %a{:href => project_path(project.id)}
+          = project.name
       .pic
         %img{:src => asset_path(project.image)}
       .descr

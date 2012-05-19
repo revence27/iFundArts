@@ -6,4 +6,6 @@ IfundartsPh::Application.routes.draw do
   match 'terms', :to => 'ifund#terms', :as => 'terms'
   match 'login', :to => 'ifund#login', :as => 'login'
   match 'creator', :to => 'ifund#creator', :as => 'creator', :via => :post
+
+  match 'project/:id', :to => 'ifund#project', :as => 'project'
 end
