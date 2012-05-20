@@ -5,7 +5,6 @@
       &iexcl;FundArts! &laquo;&bull;&raquo;
       = yield :title
     = stylesheet_link_tag 'application'
-    = javascript_include_tag 'application'
     = csrf_meta_tags
   %body
     #main{:class => 'container'}
@@ -31,7 +30,8 @@
             %li
               %a{:href => create_path} Create a Project
             %li
-              %a{:href => login_path, :id => 'signin'} Sign In
+              %div{:class => 'fb-login-button', :style => 'display: inline;'} Sign In
+              - # %a{:href => login_path, :id => 'signin', :class => 'fb-login-button'} Sign In
             %li{:id => 'gcse'}
               %div{:id  =>  "cse", :style =>  "width: 100%;"} Loading ¡FundArts! Arts Search &#133;
               %script{:src =>  "http://www.google.com/jsapi", :type  =>  "text/javascript"}
@@ -44,6 +44,7 @@
                 customSearchControl.draw('cse');
                 }, true);
       #trunk{:class => 'span-24'}
+        #fb-root
         = yield
       #footer{:class => 'span-24'}
         .activity
@@ -58,3 +59,4 @@
           = succeed '.' do
             = link_to 'Bayimba Foundation', 'http://www.bayimba.org/'
           All Rights Reserved
+      = javascript_include_tag 'application'

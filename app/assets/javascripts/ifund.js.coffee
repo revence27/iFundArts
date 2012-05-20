@@ -1,6 +1,30 @@
 $ ->
   enableNeatSignIn()
   playTheSearchGame()
+  runFacebookInit()
+
+runFacebookInit = () ->
+  window.fbAsyncInit = () ->
+    initHash  =
+      appId      : 'YOUR_APP_ID',
+      channelUrl : "//#{document.location.host}/channel.html",
+      status     : true,
+      cookie     : true,
+      xfbml      : true
+    FB.init initHash
+
+  # Load the SDK Asynchronously
+  ((d) ->
+    js  = 'facebook-jssdk'
+    ref = d.getElementsByTagName('script')[0]
+    id  = ref
+    return if d.getElementById(id)
+    js        = d.createElement('script')
+    js.id     = id
+    js.async  = true
+    js.src    = "//connect.facebook.net/en_US/all.js"
+    ref.parentNode.insertBefore js, ref
+   )(document)
 
 enableNeatSignIn = () ->
   $('#signin').click((evt) ->
