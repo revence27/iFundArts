@@ -35,3 +35,4 @@ end
 
 gem 'haml'
 gem 'will_paginate'
+gem 'activemerchant', :require => 'active_merchant'

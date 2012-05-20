@@ -130,6 +130,19 @@ body, table
       color: inherit;
     }
 
+    .tools
+    {
+      font-size: 200%;
+
+      fieldset
+      {
+        input
+        {
+          margin: 0px;
+        }
+      }
+    }
+
     .descr
     {
 

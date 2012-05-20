@@ -8,4 +8,5 @@ IfundartsPh::Application.routes.draw do
   match 'creator', :to => 'ifund#creator', :as => 'creator', :via => :post
 
   match 'project/:id', :to => 'ifund#project', :as => 'project'
+  match 'support/:id', :to => 'ifund#support', :as => 'support', :via => :post
 end

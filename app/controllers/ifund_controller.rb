@@ -21,4 +21,8 @@ class IfundController < ApplicationController
   def project
     @project = Project.find_by_id request[:id]
   end
+
+  def support
+    @project = Project.find_by_id request[:id]
+  end
 end

@@ -20,4 +20,4 @@
         = succeed '.' do
           = time_ago_in_words @project.ends_at
     .tools
-      = button_to 'iFund This!', home_path
+      = button_to('iFund This!', support_path(@project.id))
