@@ -38,7 +38,7 @@
             Amount in USD
             = surround '(', ')' do
               %i e.g., 99.95
-          %input{:type => :text, :name => :PAYMENT_REQUEST_0_AMT, :value => (@project.needs - @project.has_got).round(2)}/
+          %input{:type => :text, :name => :PAYMENT_REQUEST_0_AMT, :value => number_with_delimiter((@project.needs - @project.has_got).round(2))}/
         %input{:type => :image, :alt => 'Pay with Paypal', :src => 'https://www.paypal.com/en_US/i/btn/btn_dg_pay_w_paypal.gif'}/
         - # %img{:id => 'sellingpoint', :src => 'https://www.paypal.com/en_US/i/btn/btn_dg_pay_w_paypal.gif'}/
       %script
