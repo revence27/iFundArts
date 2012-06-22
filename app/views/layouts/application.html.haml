@@ -31,6 +31,7 @@
               %a{:href => create_path} Create a Project
             %li
               %div{:class => 'fb-login-button', :style => 'display: inline;'} Sign In
+              %span{:id => 'fbappid', 'appid' => @fbkey.to_s}
               - # %a{:href => login_path, :id => 'signin', :class => 'fb-login-button'} Sign In
             %li{:id => 'gcse'}
               %div{:id  =>  "cse", :style =>  "width: 100%;"} Loading ¡FundArts! Arts Search &#133;
@@ -54,6 +55,8 @@
           %a{:href => terms_path} Terms and Conditions
           &bull;
           %a{:href => 'http://twitter.com/bayimba'} Twitter
+          &bull;
+          %a{:href => admin_path} Administration
         .copyright
           &copy; 2011,
           = succeed '.' do

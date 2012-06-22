@@ -6,7 +6,7 @@ $ ->
 runFacebookInit = () ->
   window.fbAsyncInit = () ->
     initHash  =
-      appId      : 'YOUR_APP_ID',
+      appId      : $('#fb-app-id').attr('app-id'),
       channelUrl : "//#{document.location.host}/channel.html",
       status     : true,
       cookie     : true,

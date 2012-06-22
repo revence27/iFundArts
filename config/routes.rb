@@ -5,6 +5,10 @@ IfundartsPh::Application.routes.draw do
   match 'create', :to => 'ifund#create', :as => 'create'
   match 'terms', :to => 'ifund#terms', :as => 'terms'
   match 'login', :to => 'ifund#login', :as => 'login'
+  match 'admin', :to => 'ifund#admin', :as => 'admin'
+  match 'admin_settings', :to => 'ifund#admin_settings', :as => 'admin_settings', :via => 'post'
+  match 'admin_login', :to => 'ifund#admin_login', :as => 'admin_login'
+  match 'admin_auth',  :to => 'ifund#admin_auth',  :as => 'admin_auth', :via => :post
   match 'creator', :to => 'ifund#creator', :as => 'creator', :via => :post
 
   match 'project/:id', :to => 'ifund#project', :as => 'project'

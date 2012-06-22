@@ -1,22 +1,37 @@
 = content_for :title do
   Create a Project
 
-%form{:method => 'POST', :action => creator_path, :enctype => 'multipart/form-data'}
+= form_tag creator_path, :method => 'POST', :enctype => 'multipart/form-data' do
   %fieldset
-    %legend Name Your Project:
+    %legend
+      Name Your Project:
+      - if flash[:name] then
+        .error #{flash[:name]}
     %input{:type => 'text', :name => 'name'}/
   %fieldset
-    %legend Describe Your Project:
+    %legend
+      Describe Your Project:
+      - if flash[:description] then
+        .error #{flash[:description]}
     %textarea{:name => 'description'}
   %fieldset
-    %legend Give Your Project a Picture:
+    %legend
+      Give Your Project a Picture:
+      - if flash[:pic] then
+        .error #{flash[:pic]}
     %input{:type => 'file', :name => 'pic'}/
     %small{:style => 'font-size: small'}
       The files we allow are those that end in <code>.gif</code>, <code>.png</code>, and <code>.pdf</code> <em>only</em>.
   %fieldset
-    %legend Set a Deadline:
+    %legend
+      Set a Deadline:
+      - if flash[:deadline] then
+        .error #{flash[:deadline]}
     %input{:type => 'text', :name => 'deadline'}/
   %fieldset
-    %legend Set a Target ($):
+    %legend
+      Set a Target ($):
+      - if flash[:target] then
+        .error #{flash[:target]}
     %input{:type => 'text', :name => 'target'}/
-  %input{:type => 'submit'}
+  %input{:type => 'submit', :value => 'Record'}

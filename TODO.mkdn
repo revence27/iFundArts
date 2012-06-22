@@ -19,3 +19,9 @@
 10. Account's projects.
 
 11. Link projects and backers.
+
+12. jQuery date picker
+
+13. FB log-in part.
+
+14. Validation of project details.

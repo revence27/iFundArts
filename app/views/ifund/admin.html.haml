@@ -1,0 +1,20 @@
+= content_for :title do
+  Administration
+
+Administration
+
+= form_tag admin_settings_path, :method => :post do
+  %fieldset
+    %legend
+      Admin Password
+      - if flash[:pass] then
+        .error
+          = flash[:pass]
+    %input{:type => :password, :value => '', :name => :pass}/
+  %fieldset
+    %legend Admin Password (again)
+    %input{:type => :password, :value => '', :name => :pass2}/
+  %fieldset
+    %legend Facebook Key
+    %input{:type => :text, :value => @fbkey, :name => :fbkey}/
+  %input{:type => :submit, :value => 'Record'}/

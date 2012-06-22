@@ -79,3 +79,9 @@ pros = Project.create(
         :needs => 40_000.0
       }
   ])
+
+File.open('/dev/random') do |f|
+  rnd = [f.read(10)].pack('m')
+  sha = Digest::SHA1.new << %[#{rnd}lovedisease]
+  AdminPassword.create :sha1_salt => rnd, :sha1_pass => sha.to_s
+end

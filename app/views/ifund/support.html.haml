@@ -22,7 +22,7 @@
           = time_ago_in_words @project.ends_at
     .tools
       %script{:src => 'https://www.paypalobjects.com/js/external/dg.js', :language => 'javascript', :type => 'text/javascript'}
-      %form{:method => :post, :action => 'https://api-3t.sandbox.paypal.com/nvp'}
+      = form_tag 'https://api-3t.sandbox.paypal.com/nvp', :method => :post do
         %input{:type => :hidden, :name => :SUCCESSURL, :value => project_url(:project => @project.id, :from => :paypal)}/
         %input{:type => :hidden, :name => :RETURNURL, :value => project_url(:project => @project.id, :from => :paypal)}/
         %input{:type => :hidden, :name => :CANCELURL, :value => project_url(:project => @project.id)}/

@@ -11,13 +11,32 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120506075534) do
+ActiveRecord::Schema.define(:version => 20120619172306) do
+
+  create_table "admin_passwords", :force => true do |t|
+    t.text     "sha1_pass"
+    t.text     "sha1_salt"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "conferences", :force => true do |t|
     t.datetime "when"
     t.text     "title"
     t.text     "tagline"
     t.text     "where"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "f_b_keys", :force => true do |t|
+    t.text     "key"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "facebook_keys", :force => true do |t|
+    t.text     "key"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

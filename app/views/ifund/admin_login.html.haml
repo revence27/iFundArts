@@ -1,0 +1,14 @@
+= content_for :title do
+  Administration Log-in
+
+Administration Log-in
+
+= form_tag admin_auth_path, :method => :post do
+  %fieldset
+    %legend
+      Administrator Password
+      - if flash[:login] then
+        .error
+          #{flash[:login]}
+    %input{:type => :password, :name => :adminpass}/
+  %input{:type => :submit, :value => 'Log in'}/
